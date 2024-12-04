@@ -2,7 +2,6 @@ import React from "react";
 import { Tabs, useNavigation } from "expo-router";
 import { FontAwesome } from "@expo/vector-icons";
 import PortadaIcon from "@/presentation/components/ui/icons/Portada";
-import { DrawerActions } from "@react-navigation/native";
 import OnTaggleDrawer from "@/infraestructrure/utils/OnTaggleDrawer";
 
 const TabsLayout = () => {
@@ -10,10 +9,15 @@ const TabsLayout = () => {
 
   return (
     <Tabs 
-      screenOptions={{ 
+      screenOptions={{
+        headerShadowVisible: false,
+        sceneStyle: {
+          backgroundColor: "white",
+        },
         tabBarActiveTintColor: "#653D3D",
         headerLeft: ({ tintColor, canGoBack }) => 
-        <FontAwesome size={24} name="bars" onPress={() => OnTaggleDrawer(navigation)} />,
+        <FontAwesome size={24} className="ml-5" name="bars" onPress={() => OnTaggleDrawer(navigation)} />,
+        headerTitleAlign: "center",
       }}>
       <Tabs.Screen
         name="(home)"
@@ -36,6 +40,10 @@ const TabsLayout = () => {
         name="saved/index"
         options={{
           title: "Guardado",
+          headerTitleStyle: {
+            fontSize: 20,
+            fontWeight: "bold",
+          },
           tabBarIcon: ({ color }) => (
             <FontAwesome size={28} name="bookmark-o" color={color} />
           ),

@@ -3,7 +3,6 @@ import { DrawerActions, NavigationProp, StackActions } from "@react-navigation/n
 
 // !This function is used to toggle the drawer in the app
 export default function OnTaggleDrawer(navigation: NavigationProp<ReactNavigation.RootParamList>, canGoBack: boolean = false) {
-
     if (canGoBack) {
         navigation.dispatch( StackActions.pop() );
         return;
