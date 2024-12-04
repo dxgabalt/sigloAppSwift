@@ -1,16 +1,26 @@
 import React from "react";
-import { Tabs } from "expo-router";
+import { Tabs, useNavigation } from "expo-router";
 import { FontAwesome } from "@expo/vector-icons";
-import PortadaIcon from "../../presentation/components/ui/icons/Portada";
+import PortadaIcon from "@/presentation/components/ui/icons/Portada";
+import { DrawerActions } from "@react-navigation/native";
+import OnTaggleDrawer from "@/infraestructrure/utils/OnTaggleDrawer";
 
 const TabsLayout = () => {
+  const navigation = useNavigation();
+
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: "#653D3D" }}>
+    <Tabs 
+      screenOptions={{ 
+        tabBarActiveTintColor: "#653D3D",
+        headerLeft: ({ tintColor, canGoBack }) => 
+        <FontAwesome size={24} name="bars" onPress={() => OnTaggleDrawer(navigation)} />,
+      }}>
       <Tabs.Screen
         name="(home)"
         options={{
           title: "Portada",
           tabBarIcon: ({ color }) => <PortadaIcon size={28} color={color} />,
+          headerShown: false,
         }}
       />
       <Tabs.Screen
