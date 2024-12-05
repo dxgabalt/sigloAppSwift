@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-export default function SettingsDrawerScreen() {
+export default function ElMundoDrawerScreen() {
   return (
     <View>
-      <Text>Hola ajustes</Text>
+      <Text>EL mundo</Text>
      </View>
   );
 }

@@ -65,10 +65,10 @@ export default function CustomDrawer(props: DrawerContentComponentProps) {
       </DrawerContentScrollView>
       <View className="items-center justify-center px-5 border-t border-t-border">
         <Pressable className="px-5 py-3 mt-4 mb-1 bg-dangerous rounded-full w-full">
-          <Text className="text-white text-2xl text-center font-semibold">Anúnciate</Text>
+          <Text className="text-white text-2xl text-center">Anúnciate</Text>
         </Pressable>
         <Pressable className="px-5 py-3 mt-1 mb-4 bg-dangerous rounded-full w-full">
-          <Text className="text-white text-2xl text-center font-semibold">Suscríbete</Text>
+          <Text className="text-white text-2xl text-center">Suscríbete</Text>
         </Pressable>
       </View>
     </>
