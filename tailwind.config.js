@@ -13,7 +13,9 @@ module.exports = {
       'primary': '#653D3D',
       'white': '#FFFFFF',
       'border': '#dad7cd',
-      'dangerous': '#dc2f02'
+      'dangerous': '#dc2f02',
+      'secundary': '#f3f3f3',
+      'black': '#000000',
     },
     extend: {
 

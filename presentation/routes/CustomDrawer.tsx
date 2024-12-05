@@ -60,7 +60,7 @@ export default function CustomDrawer(props: DrawerContentComponentProps) {
           }
         />
       </View>
-      <DrawerContentScrollView {...props}>
+      <DrawerContentScrollView showsVerticalScrollIndicator={false} {...props}>
         <DrawerItemList {...props} />
       </DrawerContentScrollView>
       <View className="items-center justify-center px-5 border-t border-t-border">
